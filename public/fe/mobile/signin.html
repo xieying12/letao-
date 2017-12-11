@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>注册</title>
+	<link rel="stylesheet" href="css/signin.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/mui.min.css">
+</head>
+<body>
+	<!-- 顶部 -->
+	<div class="mui-bar mui-bar-nav signin-search">	
+		<a href="login.html" id="signin-search" class="fa fa-arrow-left mui-pull-right"></a>
+		<h1 class="mui-title">注册</h1>
+					
+	</div>
+
+	<!-- 底部 -->
+	<nav class="mui-bar mui-bar-tab lt-footer">
+			<a class="mui-tab-item " href="#tabbar">
+				<span class="fa fa-home "></span>
+				<span class="mui-tab-label active">首页</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="fa fa-bars active"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="fa fa-shopping-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map">
+				<span class="fa fa-user"></span>
+				<span class="mui-tab-label">会员中心</span>
+			</a>
+	</nav>
+
+	<!-- 内容部分 -->
+	<div class="mui-content signin">	
+	<form class="form" >
+		<div class="mui-input-row">
+				<input type="text" name="username"  placeholder="用户名">
+			<!-- <span class="mui-icon mui-icon-eye"></span> -->
+		</div>
+		<div class="mui-input-row">
+			<input type="text" name="mobile"  placeholder="手机号">
+			<!-- <span class="mui-icon mui-icon-eye"></span> -->
+		</div>
+		<div class="mui-input-row mui-password">
+			<input type="text" name="password"  class="mui-input-password" placeholder="密码">
+			<span class="mui-icon mui-icon-eye"></span>
+		</div>
+		<div class="mui-input-row mui-password">
+			<input type="text"  name="repassword" class="mui-input-password" placeholder="确认密码">
+			<span class="mui-icon mui-icon-eye"></span>
+		</div>
+		
+		<div class="signinpw">
+			<input type="text"  name="vCode" placeholder="认证码">
+			<input type="button" class="getVc" value="获取认证码">
+		</div>
+	
+		<button type="button" class="mui-btn mui-btn-block mui-btn-primary">注册</button>	
+		<div class="signin-M">
+			<input type="checkbox" name="checkbox" class="re">
+			<a href="#" class="agree" >我同意《会员服务协议》</a>
+			<a href="login.html">立即登录</a>
+		</div>
+	</div>
+</form>
+
+	<script  src="js/mui.js"></script>
+	<script src="js/lt-index.js"></script>
+	<script src="js/common.js"></script>
+	<script src="lib/zepto/zeptoT.min.js"></script>
+	<script src="js/signin.js"></script>
+	<script>
+	
+	</script>
+</body>
+</html>

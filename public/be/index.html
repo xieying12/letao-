@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>后台首页</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+     <script src="js/echarts.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- 左侧边栏 -->
+    <div class="left">
+
+      <!-- 顶部 -->
+      <div class="top">
+          <span>ITCAST</span>
+      </div>
+
+      <!-- 中间用户部分 -->
+      <div class="user">
+          <i></i>
+          <span>超级管理员</span>
+     </div>
+
+      <!--  底部 管理菜单 -->
+      <div class="menu">
+        <ul>
+           <li><a href="user.html"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
+            <li class="child second"  data-toggle="collapse" href="#collapseExample"><a href="#">
+               <i class="glyphicon glyphicon-th-list"></i>
+                <span>分类管理</span></a>
+            </li>
+             <div class="child" id="collapseExample" aria-expanded='true' style="display:none">
+                    <a href="catepageFirst.html" class="first">一级分类</a>
+                    <a href="categorySecond.html" class="second">二级分类</a>
+              </div>
+            <li><a href="product.html"><i class="glyphicon glyphicon-tag"></i><span>商品管理</span></a></li>
+         </ul>
+      </div>
+    </div>
+    <!-- 右侧 -->
+    <div class="right">
+       <!-- 头部 -->
+       <div class="nav">
+          <a href="#collapseE" class="glyphicon glyphicon-align-justify" data-toggle="collapse" ></a>
+          <a href="#" class="glyphicon glyphicon-share" data-toggle="modal" data-target=".be-example-modal-sm"></a>
+         
+       </div>
+        <!-- 是否退出 -->
+          <div class="modal fade be-example-modal-sm">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                </div>
+
+                <p>确定退出吗？</p>
+
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-primary">确定</button>
+               </div>
+              </div>
+            </div>
+          </div>
+       <!-- 内容部分 -->
+       <div class="content">
+         <!-- 路径部分 -->
+         <div class="container-fluid">          
+            <ol class="breadcrumb">
+              <li><a href="#">管理系统</a></li>             
+              <li class="active">首页</li>
+            </ol>         
+         </div>
+         <!-- 柱状图 -->
+          <div id="main" style="width: 500px;height:400px;"></div>
+          <!-- 饼状图 -->
+          <div id="pic" style="width: 500px;height:400px;"></div>
+       </div>
+    </div>
+  
+           
+       
+   
+   
+    <script src="js/jquery.min.js"></script>    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/catepageFirst.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+    $('.glyphicon-align-justify').click(function(){
+      console.log(1);
+      $(".right").toggleClass('rights');
+      $(".left").toggle();
+    });
+    $('.second').click(function(){
+      $("#collapseExample").toggle();
+    })
+    </script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '2017年注册人数'
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: ["1月","2月","3月","4月","5月","6月"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [1000, 2000, 3600, 1300, 1100, 2200]
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('pic'));
+
+        // 指定图表的配置项和数据
+        var option = {
+              title : {
+                  text: '热门品牌销售',
+                  subtext: '2017年6月',
+                  x:'center'
+              },
+              tooltip : {
+                  trigger: 'item',
+                  formatter: "{a} <br/>{b} : {c} ({d}%)"
+              },
+              legend: {
+                  orient: 'vertical',
+                  left: 'left',
+                  data: ['耐克','阿迪','百伦','安踏','李宁']
+              },
+              series : [
+                  {   name:'',
+                      type: 'pie',
+                      radius : '55%',
+                      center: ['50%', '60%'],
+                      data:[
+                          {value:335, name:'耐克'},
+                          {value:310, name:'阿迪'},
+                          {value:234, name:'百伦'},
+                          {value:135, name:'安踏'},
+                          {value:1548, name:'李宁'}
+                      ],
+                      itemStyle: {
+                          emphasis: {
+                              shadowBlur: 10,
+                              shadowOffsetX: 0,
+                              shadowColor: 'rgba(0, 0, 0, 0.5)'
+                          }
+                      }
+                  }
+              ]
+          };
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+  </body>
+</html>

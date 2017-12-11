@@ -1,0 +1,74 @@
+/* 顶部搜索框 */
+div.address-search{
+	width: 100%;
+	height: 46px;
+	line-height: 46px;
+	background: #046691;
+
+}
+div.address-search a:first-child{
+	display: block;
+	float: left;
+	width: 10%;
+	height: 100%;
+	line-height: 46px;
+	text-align: center;
+	color: #fff;
+}
+
+div.address-search h1{	
+	/* width: 80%; */
+	color: #fff;
+	
+}
+
+
+
+/* 底部 */
+nav.lt-footer{
+	width: 100%;
+	height: 48px;
+	/* line-height: 48px; */
+	background: #046691;
+
+}
+nav.lt-footer a span{
+	color: #fff;
+	display: block;
+	padding-top: 0;
+
+}
+nav.lt-footer a:nth-child(4) span{
+	color: #ff8207;
+}
+
+/* 分类列表 */
+.address-list{
+	width: 100%;
+}
+.address-list li{
+	width: 100%;
+}
+.address-list li>.addColor{
+	color: #ccc;
+}
+.title{
+	text-align: center;
+	padding: 10px 0;
+	background: #fff;
+}
+.title+ul {
+	position: relative;
+}
+#list li>a .addColor{
+	color: #000;
+}
+
+#list>li span{
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	right: 10px;
+	font-size: 16px;
+	color:#ccc;
+}

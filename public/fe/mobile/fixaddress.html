@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>修改收货地址</title>
+	<link rel="stylesheet" href="css/fixaddress.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" href="css/mui.picker.css">
+	<link rel="stylesheet" href="css/mui.poppicker.css">
+	<link rel="stylesheet" href="css/address.css">
+</head>
+<body>
+	<!-- 顶部 -->
+	<div class="mui-bar mui-bar-nav fixaddress-search">	
+		<a  href="address.html" id="fixaddress-search" class="fa fa-arrow-left mui-pull-right"></a>
+		<h1 class="mui-title">修改收货地址</h1>
+					
+	</div>
+
+	<!-- 底部 -->
+	<nav class="mui-bar mui-bar-tab lt-footer">
+			<a class="mui-tab-item " href="index.html">
+				<span class="fa fa-home "></span>
+				<span class="mui-tab-label active">首页</span>
+			</a>
+			<a class="mui-tab-item" href="sort.html">
+				<span class="fa fa-bars active"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item" href="shopping.html">
+				<span class="fa fa-shopping-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="user.html">
+				<span class="fa fa-user"></span>
+				<span class="mui-tab-label">会员中心</span>
+			</a>
+	</nav>
+
+	<!-- 内容部分 -->
+	<div class="mui-content fixadd">	
+	<form action="">
+		<div class="list">
+			<input type="text" class="mui-input-password" value="周大生">		
+		</div>
+
+		<div class="list">
+			<input type="text" class="mui-input-password" value="111112">		
+		</div>
+		<div class="list">
+			<input type="text" class="mui-input-password" value="山西省太原市小店区">		
+		</div>
+		<div class="mui-contents">
+			<div class="mui-content-padded">
+				<div id="cityResult" class="ui-alert"></div>
+				<button id="showCityPicker3" class="mui-btn mui-btn-block" type="button">添加收货地址</button>
+				<div id="cityResult3" class="ui-alert"></div>
+			</div>
+		</div>
+		<div class="mui-input-row" >
+			<textarea id="textarea" rows="5" placeholder="请输入具体地址"></textarea>
+		</div>	
+		<!-- <div id="cityResult" class="ui-alert"></div>
+        <button id="showCityPicker3" class="mui-btn mui-btn-block" type="button">添加收货地址</button>
+        <div id="cityResult3" class="ui-alert"></div> -->
+                    
+	</form>				
+		
+		<button type="button" class="mui-btn mui-btn-block mui-btn-primary">确认</button>	
+	</div>
+
+
+	
+	<script src="js/jquery-1.12.1.min.js"></script>	
+	<script src="js/lt-index.js"></script>
+	 <script src="./js/mui.min.js"></script>
+		<!--<script src="../js/mui.picker.min.js"></script>-->
+		<script src="./js/mui.picker.js"></script>
+		<script src="./js/mui.poppicker.js"></script>
+		<script src="js/common.js"></script>
+		<script src="./js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+        
+        <!-- <script src="js/index.js">
+        </script> -->
+        <script>
+            (function ($, doc) {
+			$.init();
+			$.ready(function () {
+				/**
+				 * 获取对象属性的值
+				 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+				 * @param {Object} obj 对象
+				 * @param {String} param 属性名
+				 */
+				var _getParam = function (obj, param) {
+					return obj[param] || '';
+				};
+				
+				//-----------------------------------------
+				//					//级联示例
+				var cityPicker3 = new $.PopPicker({
+					layer: 3
+				});
+				cityPicker3.setData(cityData3);
+				var showCityPickerButton = doc.getElementById('showCityPicker3');
+				var cityResult3 = doc.getElementById('cityResult3');
+				showCityPickerButton.addEventListener('tap', function (event) {
+					cityPicker3.show(function (items) {
+						cityResult3.innerText = "你选择的城市是:" + _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');
+						//返回 false 可以阻止选择框的关闭
+						//return false;
+					});
+				}, false);
+			});
+		})(mui, document);
+        </script>
+</body>
+</body>
+</html>

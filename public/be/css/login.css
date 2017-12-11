@@ -1,0 +1,90 @@
+/*
+* @Author: Xieying
+* @Date:   2017-12-02 19:56:53
+* @Last Modified by:   Xieying
+* @Last Modified time: 2017-12-03 20:17:08
+*/
+/* 头部 */
+body{
+	background: #223233;
+	
+}
+.container{
+	position: relative;
+}
+.col-md-4{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -118px;
+	margin-left: -200px;
+	box-sizing:border-box;
+}
+.top{
+	background: #1078b0;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	padding-top: 8px;
+	box-sizing:border-box;
+}
+.buttom{
+	height: 220px;
+	background: #fff;
+	padding: 15px;
+	text-align: center;
+	box-sizing:border-box;
+}
+.top h4{
+	display: block;
+	font-weight: 700;
+	color: #fff;
+	font-size: 20px;
+}
+/* 表单部分 */
+/* .list{
+	height: 176px;
+} */
+.list>div{
+	width: 100%;
+	/* margin-bottom: 15px; */
+}
+.list>div span{
+	width: 30%;
+	height: 100%;
+	display: inline-block;
+	font-weight: 700;
+	text-align: right;
+	padding-right: 30px;
+	box-sizing:border-box;
+}
+.list>div input{
+	width: 70%;
+	padding: 5px 0 5px 10px;
+	border-radius: 6px;
+	box-shadow:none;
+	outline: none;
+	/* input-border:none; */
+	box-sizing:border-box;
+	display: inline-block;
+	
+}
+
+input:focus {  
+    outline: none;  
+    border-color: #eee;  
+    box-shadow: 0 0 1px rgba(207, 220, 0, 0.4);  
+    border-radius: 5px;  
+} 
+/* 按钮 */
+.buttom .reset{
+	margin-top: 20px;
+	margin-right: 28px;
+	box-sizing:border-box;
+}
+.buttom .login{
+	margin-top: 20px;
+	margin-left: 28px;
+	background: #1078b0;
+	box-sizing:border-box;
+}

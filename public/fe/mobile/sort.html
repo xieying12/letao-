@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>分类页面</title>
+	<link rel="stylesheet" href="./css/sort.css">
+	<link rel="stylesheet" href="./css/mui.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+	<!-- 顶部搜索框 -->
+		
+	<div class="mui-bar mui-bar-nav sort-search">	
+		<a href="javascript:history.back();" id="sort-search" class="fa fa-arrow-left mui-pull-right"></a>
+		<input type="search"  placeholder=""  >
+		<a id="sort-search" class="fa fa-search mui-pull-right"></a>			
+	</div>
+	
+				
+	
+	<!-- 底部 -->
+	<nav class="mui-bar mui-bar-tab lt-footer">
+			<a class="mui-tab-item " href="index.html">
+				<span class="fa fa-home "></span>
+				<span class="mui-tab-label active">首页</span>
+			</a>
+			<a class="mui-tab-item" href="sort.html">
+				<span class="fa fa-bars active"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item" href="shopping.html">
+				<span class="fa fa-shopping-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="user.html">
+				<span class="fa fa-user"></span>
+				<span class="mui-tab-label">会员中心</span>
+			</a>
+	</nav>
+
+	<!-- 分类列表 -->
+	<div class="mui-content mui-row mui-fullscreen category">
+			<div class="mui-col-xs-3" id="wrapper">
+				<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+
+					<a class="mui-control-item mui-active" href="#content1">运动馆</a>
+					<a class="mui-control-item" href="#content2">女士馆</a>
+					<a class="mui-control-item" href="#content3">男士馆</a>
+					<a class="mui-control-item" href="#content4">帆布馆</a>
+					<a class="mui-control-item" href="#content5">户外馆</a>
+					<a class="mui-control-item " href="#content1">运动馆</a>
+					<a class="mui-control-item" href="#content2">女士馆</a>
+					<a class="mui-control-item" href="#content3">男士馆</a>
+					<a class="mui-control-item" href="#content4">帆布馆</a>
+					<a class="mui-control-item" href="#content5">户外馆</a>
+					<a class="mui-control-item" href="#content1">运动馆</a>
+					<a class="mui-control-item" href="#content2">女士馆</a>
+					<a class="mui-control-item" href="#content3">男士馆</a>
+					<a class="mui-control-item" href="#content4">帆布馆</a>
+					<a class="mui-control-item" href="#content5">户外馆</a>
+					<a class="mui-control-item " href="#content1">运动馆</a>
+					<a class="mui-control-item" href="#content2">女士馆</a>
+					<a class="mui-control-item" href="#content3">男士馆</a>
+					<a class="mui-control-item" href="#content4">帆布馆</a>
+					<a class="mui-control-item" href="#content5">户外馆</a>
+					<a class="mui-control-item " href="#content1">运动馆</a>
+					<a class="mui-control-item" href="#content2">女士馆</a>
+					<a class="mui-control-item" href="#content3">男士馆</a>
+					<a class="mui-control-item" href="#content4">帆布馆</a>
+					<a class="mui-control-item" href="#content5">户外馆</a>
+
+				</div>
+			</div>
+
+			<div id="segmentedControlContents" class="mui-col-xs-9">
+				<div id="content1" class="mui-control-content mui-active">
+					<ul class="category-brand">
+						<li class=" mui-col-xs-4">
+							<a href="javascript:;">
+								<img src="images/brand1.png" alt="">
+								<span>耐克</span>
+							</a>
+						</li>
+						<li class=" mui-col-xs-4">
+							<a href="">
+								<img src="images/brand2.png" alt="">
+								<span>阿迪</span>
+							</a>
+						</li>
+						<li class="mui-col-xs-4">
+							<a href="">
+								<img src="images/brand3.png" alt="">
+								<span>新百伦</span>
+							</a>
+						</li>
+						<li class="mui-col-xs-4">
+							<a href="">
+								<img src="images/brand4.png" alt="">
+								<span>哥伦比亚</span>
+							</a>
+						</li>
+						<li class="mui-col-xs-4">
+							<a href="">
+								<img src="images/brand5.png" alt="">
+								<span>匡威</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			<!-- <div id="content2" class="mui-control-content">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">第2个选项卡子项-1</li>
+					<li class="mui-table-view-cell">第2个选项卡子项-2</li>
+					<li class="mui-table-view-cell">第2个选项卡子项-3</li>
+					<li class="mui-table-view-cell">第2个选项卡子项-4</li>
+					<li class="mui-table-view-cell">第2个选项卡子项-5</li>
+				</ul>
+			</div>
+
+			<div id="content3" class="mui-control-content">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">第3个选项卡子项-1</li>
+					<li class="mui-table-view-cell">第3个选项卡子项-2</li>
+					<li class="mui-table-view-cell">第3个选项卡子项-3</li>
+				</ul>
+			</div>
+
+			<div id="content4" class="mui-control-content">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">第4个选项卡子项-1</li>
+					<li class="mui-table-view-cell">第4个选项卡子项-2</li>
+					<li class="mui-table-view-cell">第4个选项卡子项-3</li>
+				</ul>
+			</div>
+
+			<div id="content5" class="mui-control-content">
+				<ul class="mui-table-view">
+					<li class="c">第5个选项卡子项-1</li>
+					<li class="mui-table-view-cell">第5个选项卡子项-2</li>
+					<li class="mui-table-view-cell">第5个选项卡子项-3</li>
+				</ul>
+			</div> -->		
+		</div>
+
+			
+	</div>
+
+	
+
+	<!-- 一级模板 -->
+	<script type="text/template" id='template'>
+		<%for(var i=0;i<rows.length;i++){%>
+			<%if(i==0){%>
+				
+				<a class="mui-control-item mui-active" data-id="<%=rows[i].id%>" href="#"><%=rows[i].categoryName%></a>
+			<%}else{%>
+				<a class="mui-control-item" data-id="<%=rows[i].id%>" href="#content<%=(i+1)%>"><%=rows[i].categoryName%></a>
+			<%}%>
+			
+		<%}%>
+
+	</script>
+	<!-- 二级模板 -->
+	<script type="text/template" id="second-template">
+		
+	<%for(var i=0;i<rows.length;i++){%>		
+		<%if(rows.length==0){%>
+			<p>暂无商品</p>
+		<%}else{%>
+			
+			<ul class="category-brand">
+				<li class=" mui-col-xs-4">
+					<a href="#">
+						<img src="<%=rows[i].brandLogo%>" alt="<%=rows[i].brandName%>">
+						<span><%=rows[i].brandName%></span>
+					</a>
+				</li>
+			</ul>
+		
+		
+	<%}%>	
+		
+	<%}%>
+
+			
+	</script>
+	
+	<script src="./js/mui.js"></script>
+	<script src="lib/zepto/zepto.min.js"></script>
+	<script src="lib/artTemplate/template-native.js"></script>
+	<script src="lib/js/iScroll.js"></script>
+	<script src="lib/js/jQuery.min.js"></script>
+	<script src="js/sort.js"></script>
+	<script src="./js/lt-index.js"></script>
+	<script src="js/common.js"></script>			
+			
+	
+</body>
+</html>

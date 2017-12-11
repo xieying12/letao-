@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>登录</title>
+	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/mui.min.css">
+</head>
+<body>
+	<!-- 顶部 -->
+	<div class="mui-bar mui-bar-nav login-search">	
+		<a href="user.html" id="login-search" class="fa fa-arrow-left mui-pull-right"></a>
+		<h1 class="mui-title">登录</h1>
+					
+	</div>
+
+	<!-- 底部 -->
+	<nav class="mui-bar mui-bar-tab lt-footer">
+			<a class="mui-tab-item " href="#tabbar">
+				<span class="fa fa-home "></span>
+				<span class="mui-tab-label active">首页</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="fa fa-bars active"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="fa fa-shopping-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map">
+				<span class="fa fa-user"></span>
+				<span class="mui-tab-label">会员中心</span>
+			</a>
+	</nav>
+
+	<!-- 内容部分 -->
+	<div class="mui-content">	
+		<div class="mui-content-padded">
+			<form class="form" >
+				<div class="mui-input-row">
+					<input type="text" name="username" placeholder="用户名/手机号">			
+				</div>
+				<div class="mui-input-row mui-password">
+					<input type="password" name="password" class="mui-input-password" placeholder="密码">
+					<span class="mui-icon mui-icon-eye"></span>
+				</div>
+				<button type="button" class="mui-btn mui-btn-block mui-btn-primary">登录</button>
+				<a href="signin.html">免费注册</a>
+			</form>	
+		</div>
+	</div>
+
+
+	<script  src="js/mui.js"></script>
+	<script src="lib/zepto/zepto.min.js"></script>
+	<script src="js/login.js"></script>
+	<!-- <script src="js/lt-index.js"></script> -->
+	<!-- <script src="js/common.js"></script> -->
+</body>
+</html>

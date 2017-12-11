@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>收货地址管理</title>
+	<link rel="stylesheet" href="css/address.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/mui.min.css">
+</head>
+<body>
+	<!-- 顶部 -->
+	<div class="mui-bar mui-bar-nav address-search">	
+		<a href="user.html" id="address-search" class="fa fa-arrow-left mui-pull-right"></a>
+		<h1 class="mui-title">个人中心</h1>
+					
+	</div>
+
+	<!-- 底部 -->
+	<nav class="mui-bar mui-bar-tab lt-footer">
+			<a class="mui-tab-item " href="index.html">
+				<span class="fa fa-home "></span>
+				<span class="mui-tab-label active">首页</span>
+			</a>
+			<a class="mui-tab-item" href="sort.html">
+				<span class="fa fa-bars active"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item" href="shopping.html">
+				<span class="fa fa-shopping-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="user.html">
+				<span class="fa fa-user"></span>
+				<span class="mui-tab-label">会员中心</span>
+			</a>
+	</nav>
+
+	<!-- 内容部分 -->
+	<div class="mui-content">
+		
+		<div id="tabbar-with-map" class="mui-control-content mui-active">
+			<div class="title">
+				添加收货地址
+			</div>
+			<ul class="mui-table-view address-list" id="list">	
+				<li class="mui-table-view-cell">
+					<a href="fixaddress.html">
+						<p class="addColor">邮编：111112 收货人：张三</p>
+						<p >山西省太原市</p>
+						<span class="mui-icon mui-icon-forward"></span>
+					</a>
+					
+				</li>				
+			</ul>
+		</div>
+		
+	</div>
+
+
+	<script  src=/"js/mui.js"></script>
+	<script src="js/lt-index.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/back.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>购物车</title>
+	<link rel="stylesheet" href="css/shopping.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/mui.min.css">
+	 <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+	<!-- 顶部 -->
+	<div class="mui-bar mui-bar-nav shop-search">	
+		<a href="user.html" id="shop-search" class="fa fa-arrow-left mui-pull-right"></a>
+		<h1 class="mui-title">购物车</h1>
+		<a id="shop-search" class="fa fa-search mui-pull-right"></a>			
+	</div>
+
+	<!-- 底部 -->
+	<nav class="mui-bar mui-bar-tab lt-footer">
+			<a class="mui-tab-item " href="index.html">
+				<span class="fa fa-home "></span>
+				<span class="mui-tab-label active">首页</span>
+			</a>
+			<a class="mui-tab-item" href="sort.html">
+				<span class="fa fa-bars active"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item" href="shopping.html">
+				<span class="fa fa-shopping-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="user.html">
+				<span class="fa fa-user"></span>
+				<span class="mui-tab-label">会员中心</span>
+			</a>
+	</nav>
+
+	<!-- 内容部分 -->
+	<div class="mui-content">
+		<!-- <div class="mui-content mui-scroll-wrapper"> -->
+		    <div class="mui-scroll">
+				<ul  class="mui-table-view">
+				</ul>
+			</div>
+		<!-- </div> -->
+	</div>
+	<script type="text/template" id="cart-template">
+	<%for(var i=0;i<list.length;i++){%>
+		<li class="mui-table-view-cell">
+			<div class="mui-slider-right mui-disabled">
+				<a class="mui-btn mui-btn-grey mui-icon "  data-id="<%=list[i].id%>">删除</a>
+				<a class="mui-btn mui-btn-yellow mui-icon " data-id="<%=list[i].id%>">编辑</a>
+			</div>
+			<div class="mui-slider-handle" >
+				<div class="mui-table-cell">
+					<a href="javascript:;" >
+						<span class="user-icon mui-icon mui-icon-forward"></span>
+						<div class="shop-list">
+							<img class="mui-media-object mui-pull-left" src="<%=list[i].pic[0].picAddr%>">
+							<input data-id="<%list[i].id%>" name="checkbox" type="checkbox">
+						</div>
+						<div class="mui-media-body">
+							<h4><%=list[i].proName%></h4>
+		            		 <span class="new">&yen;<%=list[i].price%></span>
+		            		 <span class="old">&yen;<%=list[i].oldPrice%></span>
+		            		 <span class="s-right">x <%=list[i].num%> 双</span>
+							<p class="mui-ellipsis">鞋码：<%=list[i].size%></p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</li>
+	<%}%>
+	</script>
+
+	<script  src="js/mui.js"></script>	
+	<script src="lib/zepto/zeptoT.min.js"></script>
+	<script src="lib/artTemplate/template-native.js"></script>
+	<script src="./js/common.js"></script>
+	<script src="js/shopping.js"></script>
+</body>
+</html>

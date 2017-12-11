@@ -1,0 +1,223 @@
+
+/* 左侧 */
+.left{
+	height: 100%;
+	width: 180px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	/* float: left; */
+	background: #223233;
+	/* margin-right: 180px; */
+}
+/* 左侧头部 */
+.left .top{	
+	height: 50px;
+	line-height: 50px;
+	background: #018db7;
+}
+.left .top span{
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+}
+
+
+/* 中间用户部分 */
+.user{
+	height: 120px;	
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+}
+.user i{																						
+	display: block;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	background: url('../images/default.png');	
+	background-size: 52px 52px;
+	position: absolute;
+	left: 20px;
+	top: 30px;
+	
+}
+.user span{
+	display: block;
+	color: #fff;
+	margin-top: 49px;
+	padding-left: 42px;
+}
+
+/* 底部 管理菜单 */
+.menu{
+	height: 100%;	
+	text-align: center;
+
+}
+.menu ul{
+	height: 100%;
+	list-style: none;
+	padding: 0;
+}
+.menu ul li{
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.menu ul span{
+	color: #ada8a3;
+
+}
+.menu ul i{
+	margin-right: 5px;
+	color: #ada8a3;
+}
+.child{
+	height: 60px;
+}
+.child a{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	color: #fff;
+	font-size: 12px;
+}
+.child a{	
+	color: #ada8a3;
+}
+
+.modal-content p{
+	/* height: 30px; */
+	line-height: 40px;
+	padding-left: 20px;
+}
+
+
+
+/* 右侧 */
+/* 右侧 */
+.right{	
+	height: 100%;
+	padding-left: 180px;
+}
+.rights{
+	padding-left: 0px;
+}
+.lefts{
+	display: none;
+}
+/* 右侧头部 */
+.right .nav{
+	height: 50px;
+	background: #018db7;
+}
+.right .nav a{
+	color: #fff;
+	display: block;
+	height: 100%;
+	padding: 17px 14px;
+}
+.right .nav a.glyphicon-align-justify{
+	float: left;
+}
+.right .nav a.glyphicon-share{
+	float: right;
+}
+/* 路径部分 */
+.container-fluid{
+	/* background: #f6f5f4; */
+	line-height: 36px;
+	border-radius: 10px;
+	height: 36px;
+	margin: 20px 15px 20px 0;
+	font-size: 14px;
+	padding: 0;
+}
+.breadcrumb{
+	padding: 4px 15px;
+}
+.container-fluid span{
+	color: #76756f;
+}
+.container-fluid .adm{
+	color:#1078b0;
+}
+.content{
+	padding-left: 15px;
+}
+/* 图形部分 */
+#main,#pic{
+	float: left;
+}
+
+
+
+/* 按钮：添加分类 */
+.add{
+	display: block;
+	width: 80px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	/* color: #323534; */
+	border: 1px solid #999;
+	border-radius: 5px;
+	margin-left: 15px;
+	background-color: #fff;
+}
+.add-content{
+	margin-top: 30px;
+	height: 200px;
+	/* line-height: 200px; */
+	text-align: left;
+	padding-left: 15px;
+}
+.add-content input{
+	height: 30px;
+	
+}
+.dropdown-menu{
+	position: absolute;
+	top: 32%;
+	left: 105px;
+}
+input.secondName{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 95%;
+}
+input.dropdown{
+	width: 100px;
+}
+
+
+
+
+
+
+/* 表格部分 */
+.list{
+	width: 97%;
+	margin-top: 15px;
+	margin-left: 15px;
+	text-align: center;
+	box-sizing:border-box;
+}
+
+.list thead td{
+	color: #000;
+	font-weight: 700;
+}
+ /* 分页 */
+ .page{
+ 	position: relative;
+ }
+ .page ul{
+ 	position: absolute;
+ 	right: 15px;
+ 	top: 0;
+ }

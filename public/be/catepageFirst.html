@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>后台</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/catepageFirst.css">
+    <link rel="stylesheet" href="bootstrap-validator/css/bootstrapValidator.min.css">
+    
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- 左侧边栏 -->
+    <div class="left">
+
+      <!-- 顶部 -->
+      <div class="top">
+          <span>ITCAST</span>
+      </div>
+
+      <!-- 中间用户部分 -->
+      <div class="user">
+          <i></i>
+          <span>超级管理员</span>
+     </div>
+
+      <!--  底部 管理菜单 -->
+      <div class="menu">
+        <ul>
+           <li><a href="user.html"><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
+            <li class="child second"  data-toggle="collapse" href="#collapseExample"><a href="#">
+               <i class="glyphicon glyphicon-th-list"></i>
+                <span>分类管理</span></a>
+            </li>
+             <div class="child" id="collapseExample" aria-expanded='true'>
+                    <a href="catepageFirst.html" class="first">一级分类</a>
+                    <a href="categorySecond.html" class="second">二级分类</a>
+              </div>
+            <li><a href="product.html"><i class="glyphicon glyphicon-tag"></i><span>商品管理</span></a></li>
+         </ul>
+      </div>
+    </div>
+    <!-- 右侧 -->
+    <div class="right">
+       <!-- 头部 -->
+       <div class="nav">
+          <a href="#collapseE" class="glyphicon glyphicon-align-justify" data-toggle="collapse" ></a>
+          <a href="#" class="glyphicon glyphicon-share" data-toggle="modal" data-target=".be-example-modal-sm"></a>
+         
+       </div>
+        <!-- 是否退出 -->
+          <div class="modal fade be-example-modal-sm">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                </div>
+
+                <p>确定退出吗？</p>
+
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-primary">确定</button>
+               </div>
+              </div>
+            </div>
+          </div>
+       <!-- 内容部分 -->
+       <div class="content">
+         <!-- 路径部分 -->
+         <div class="container-fluid">          
+            <ol class="breadcrumb">
+              <li><a href="#">管理系统</a></li>
+              <li><a href="#">分类管理</a></li>
+              <li class="active">一级分类</li>
+            </ol>         
+         </div>
+         <!-- 按钮添加分类 -->
+         <button type="button" class="add" data-toggle="modal" data-target=".bs-example-modal-sm">添加分类</button>
+          <div id="modal" class="modal fade bs-example-modal-sm">
+            <div class="modal-dialog modal-sm">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">添加分类</h4>
+                </div>
+
+                 <form class="add-content" id="form">
+                   <div class="form-group">
+                    <input type="text" name="categoryName" placeholder="请输入一级分类名称">
+                  </div>              
+                 </form>
+               <div class=" modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button type="submit" class="btn btn-primary" form="form">确定</button>
+               </div>
+              
+              </div>
+            </div>
+          </div>
+
+        <!-- 表格部分 -->
+        <table class="list table table-bordered table-hover">
+          <thead>
+            <tr>
+              <td width="20%">序号</td>
+              <td width="90%">分类名称</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td >1</td>
+              <td >户外馆</td>             
+            </tr>
+             <tr>
+              <td >2</td>
+              <td >户外馆</td>       
+            </tr>
+             <tr>
+              <td >3</td>
+              <td >户外馆</td>     
+            </tr>
+             <tr>
+              <td >4</td>
+              <td>户外馆</td>        
+            </tr>
+          </tbody>
+        </table>
+        <!-- 分页 -->
+        <div id="page">
+         
+        </div>
+       </div>
+    </div>
+  
+           
+       
+   
+  <script type="text/template" id="first-template">
+    <%for(var i=0;i<rows.length;i++){%>
+      <tr>
+        <td ><%=(page-1)*size+i+1%></td>
+        <td ><%=rows[i].categoryName%></td>             
+      </tr>
+    <%}%>
+
+  </script>
+    <script src="js/jquery.min.js"></script>    
+    <script src="bootstrap/js/bootstrap.min.js"></script>  
+    <script src="js/categoryFirst.js"></script>
+    <script src="artTemplate/template-native.js"></script>
+    <script src="bootstrap-paginator/bootstrap-paginator.min.js"></script>
+    <script src="bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script>
+    $('.glyphicon-align-justify').click(function(){
+      console.log(1);
+      $(".right").toggleClass('rights');
+      $(".left").toggleClass('lefts');
+    });
+    </script>
+  </body>
+</html>

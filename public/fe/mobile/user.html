@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>个人中心</title>
+	<link rel="stylesheet" href="css/user.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/mui.min.css">
+</head>
+<body>
+	<!-- 顶部 -->
+	<div class="mui-bar mui-bar-nav user-search">	
+		<a id="user-search" class="fa fa-arrow-left mui-pull-right"></a>
+		<h1 class="mui-title">个人中心</h1>
+					
+	</div>
+
+	<!-- 底部 -->
+	<nav class="mui-bar mui-bar-tab lt-footer">
+			<a class="mui-tab-item " href="index.html">
+				<span class="fa fa-home "></span>
+				<span class="mui-tab-label active">首页</span>
+			</a>
+			<a class="mui-tab-item" href="sort.html">
+				<span class="fa fa-bars active"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item" href="shopping.html">
+				<span class="fa fa-shopping-cart"></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="user.html">
+				<span class="fa fa-user"></span>
+				<span class="mui-tab-label">会员中心</span>
+			</a>
+	</nav>
+
+	<!-- 内容部分 -->
+	<div class="mui-content">
+		
+		<div id="tabbar-with-map" class="mui-control-content mui-active">
+			<div class="title">
+				
+			</div>
+
+			<ul class="mui-table-view" id="userlist">
+				<li class="mui-table-view-cell">
+					<a href="fixPassWord.html" class="mui-navigate-right">
+						账户与安全
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="shopping.html" class="mui-navigate-right">
+						我的购物车
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a href="address.html" class="mui-navigate-right">
+						收货地址管理
+					</a>
+				</li>
+			</ul>
+			
+			<ul class="mui-table-view" style="margin-top: 25px;">
+				<li class="mui-table-view-cell">
+					<a  href="javascript:;" style="text-align: center;color: #FF3B30;" class="logout-btn">
+						退出登录
+					</a>
+				</li>
+			</ul>
+			</div>
+		
+	</div>
+
+	<script type="text/template" id="user-template">
+		<a href=""><img src="images/user.jpg" alt="<%username%>"></a>
+		<a href="#"  class=" user-icon mui-icon mui-icon-forward"></a>
+		<p class="pfirst"><%=username%></p>
+		<p>绑定手机：<%=mobile%></p>
+
+	</script>
+	<script  src="js/mui.js"></script>
+	<script src="lib/zepto/zeptoT.min.js"></script>
+	<script src="lib/artTemplate/template-native.js"></script>
+	<script src="js/lt-index.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/user.js"></script>
+</body>
+</html>

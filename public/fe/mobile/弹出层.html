@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	
+	<title>弹出层</title>
+	<link rel="stylesheet" href="css/mui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" href="css/mui.picker.css">
+	<link rel="stylesheet" href="css/mui.poppicker.css">
+
+	<link rel="stylesheet" href="css/address.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	
+	
+
+</head>
+<body class="mui-ios mui-ios-9 mui-ios-9-1">
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<div id="cityResult" class="ui-alert"></div>
+				<button id="showCityPicker3" class="mui-btn mui-btn-block" type="button">三级联动示例 ...</button>
+				<div id="cityResult3" class="ui-alert"></div>
+			</div>
+		</div>
+		<script src="./js/mui.min.js"></script>
+		<!--<script src="../js/mui.picker.min.js"></script>-->
+		<script src="./js/mui.picker.js"></script>
+		<script src="./js/mui.poppicker.js"></script>
+		<script src="./js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {					
+					//-----------------------------------------
+					//					//级联示例
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					});
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton = doc.getElementById('showCityPicker3');
+					var cityResult3 = doc.getElementById('cityResult3');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							cityResult3.innerText = "你选择的城市是:" + _getParam(items[0], 'text') + " " + _getParam(items[1], 'text') + " " + _getParam(items[2], 'text');
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+				});
+			})(mui, document);
+		</script>
+	
+
+<!--  -->
+
+	<script  src="js/mui.js"></script>
+	<script src="js/jquery-1.12.1.min.js"></script>	
+	<script src="js/lt-index.js"></script>
+</body>
+</html>
